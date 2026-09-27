@@ -184,3 +184,39 @@ body {
         text-align: center;
     }
 }
+/* ==========================================================================
+   BỔ SUNG CHO CẤU TRÚC NHIỀU TRANG (MULTI-PAGE)
+   ========================================================================== */
+.section-tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.section-tag--theory { background-color: #e8f0fe; color: var(--tvu-primary); }
+.section-tag--practice { background-color: #fff6dd; color: #916b00; }
+
+.breakpoint-table th { background-color: var(--tvu-primary); color: #fff; font-weight: 600; }
+
+.swatch-box {
+    height: 60px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.nav-card {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+.nav-card:hover .content-card { border-color: var(--tvu-primary); }
+
+.ref-list li { padding: 8px 0; border-bottom: 1px dashed var(--tvu-card-border); }
+.ref-list li:last-child { border-bottom: none; }
