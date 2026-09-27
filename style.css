@@ -1,0 +1,186 @@
+/* ==========================================================================
+   HỆ THỐNG MÀU CHỦ ĐẠO & BIẾN TOÀN CỤC (LẤY CẢM HỨNG TỪ ĐH TRÀ VINH)
+   ========================================================================== */
+:root {
+    --tvu-primary: #003380;       /* Xanh dương đậm TVU */
+    --tvu-primary-hover: #002255; /* Xanh đậm khi hover */
+    --tvu-secondary: #0d6efd;     /* Xanh tươi bổ trợ */
+    --tvu-accent: #ffc107;        /* Màu vàng điểm nhấn */
+    --tvu-bg-gray: #f4f6f9;       /* Màu nền tổng thể dịu mắt */
+    --tvu-card-border: #e2e8f0;   /* Viền khung nội dung */
+    --tvu-text-main: #212529;     /* Màu chữ chuẩn */
+}
+
+/* ==========================================================================
+   CẤU HÌNH TỔNG QUAN
+   ========================================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--tvu-bg-gray);
+    color: var(--tvu-text-main);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   THANH HEADER / NAVBAR
+   ========================================================================== */
+.navbar-tvu {
+    background-color: var(--tvu-primary);
+    border-bottom: 3px solid var(--tvu-accent);
+}
+
+.navbar-tvu .navbar-brand {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar-tvu .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-tvu .nav-link:hover,
+.navbar-tvu .nav-link.active {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   SIDEBAR MENU HỌC TẬP (CỘT BÊN TRÁI)
+   ========================================================================== */
+.sidebar-sticky {
+    position: sticky;
+    top: 72px; /* Tránh đè lên Navbar khi cuộn */
+    height: calc(100vh - 85px);
+    overflow-y: auto;
+    background-color: #ffffff;
+    border: 1px solid var(--tvu-card-border);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.sidebar-title {
+    color: var(--tvu-primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--tvu-bg-gray);
+}
+
+.list-group-tvu .list-group-item {
+    border: none;
+    border-radius: 6px !important;
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #495057;
+    transition: all 0.2s ease;
+}
+
+.list-group-tvu .list-group-item:hover {
+    background-color: #e8f0fe;
+    color: var(--tvu-primary);
+    transform: translateX(4px);
+}
+
+.list-group-tvu .list-group-item.active {
+    background-color: var(--tvu-primary);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   VÙNG NỘI DUNG CHÍNH (MAIN CONTENT)
+   ========================================================================== */
+.hero-banner {
+    background: linear-gradient(135deg, #003380 0%, #0056b3 100%);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.content-card {
+    background: #ffffff;
+    border: 1px solid var(--tvu-card-border);
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 51, 128, 0.08) !important;
+}
+
+.section-heading {
+    color: var(--tvu-primary);
+    font-weight: 700;
+    position: relative;
+    padding-left: 12px;
+}
+
+.section-heading::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 4px;
+    background-color: var(--tvu-accent);
+    border-radius: 2px;
+}
+
+/* Khối hiển thị mã code minh họa */
+.code-box {
+    background-color: #212529;
+    color: #79c0ff;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+
+/* ==========================================================================
+   TÙY BIẾN FOOTER
+   ========================================================================== */
+.footer-tvu {
+    background-color: var(--tvu-primary);
+    color: #e9ecef;
+    border-top: 4px solid var(--tvu-accent);
+    margin-top: 50px;
+}
+
+/* ==========================================================================
+   RESPONSIVE CHO CÁC THIẾT BỊ DI ĐỘNG (MOBILE & TABLET NHỎ)
+   ========================================================================== */
+@media (max-width: 767.98px) {
+    .sidebar-sticky {
+        position: static;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .hero-banner {
+        padding: 25px 15px !important;
+        text-align: center;
+    }
+}
